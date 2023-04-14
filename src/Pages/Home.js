@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import car1 from '../assets/car1.jpg'
 import car2 from '../assets/car2.jpg'
 import car3 from '../assets/car3.jpg'
@@ -11,7 +11,10 @@ import car9 from '../assets/car9.jpg'
 import car10 from '../assets/car10.jpg'
 import car11 from '../assets/car11.jpg'
 import Navbar from '../components/Navbar'
+import { useState } from 'react'
 const Home = () => {
+
+  const[fetchdata, setFetchData] = useState([]);
   const carList = [
     {
       name:"Baleno",
@@ -113,6 +116,27 @@ const Home = () => {
       Deiven:"1800000"
     }
   ]
+  useEffect (() =>{
+    const getdata = async() =>{
+
+      const res =await fetch("https://sellmycar-e7dd1-default-rtdb.asia-southeast1.firebasedatabase.app/mycars.json")
+      const data = await res.json();
+      
+     const  fetchedata = [];
+      for(const keys in data ){
+        fetchedata.push({
+          mydata: data[keys]
+        })
+        
+      }
+     setFetchData(fetchedata);
+    }
+    getdata();
+  }, [])
+   
+  console.log(fetchdata);
+  
+
   return (
     <div className='car-list'>
      <Navbar />
@@ -128,21 +152,21 @@ const Home = () => {
         <div className="px-4 py-2">
 			
 			<div className="row">
-				{ carList.map((car ) => {
+				{ fetchdata.map((obj ) => {
 					return (
 						<div  className={`col-sm-6 col-md-3 mb-3 text-center`}>
               <div className="col-md-3">
                 
                 <div className="card col-md-3" style={{width:'340px', height:'450px'}}>
-  <img src={car.img} className="card-img-top" alt="..." />
+  <img src={obj.mydata.imageurl} className="card-img-top" alt="..." />
   <div className="card-body">
-    <h5 className="card-title">Brand: {car.name}</h5>
+    <h5 className="card-title">Brand: {obj.mydata.brnadName}</h5>
     <ul>
-    <li><p className="card-text">Color : {car.color}</p></li>
-    <li><p className="card-text">Price : {car.price}</p></li>
-    <li><p className="card-text">Milage : {car.milage}</p></li>
-    <li><p className="card-text">Year : {car.year}</p></li>
-    <li><p className="card-text">Kilometer Driven : {car.Deiven}</p></li>
+    <li><p className="card-text">Color : {obj.mydata.color}</p></li>
+    <li><p className="card-text">Price : {obj.mydata.price}</p></li>
+    <li><p className="card-text">Milage : {obj.mydata.milage}</p></li>
+    <li><p className="card-text">Year : {obj.mydata.model}</p></li>
+    {/* <li><p className="card-text">Kilometer Driven : {car.Deiven}</p></li> */}
     </ul>
  
   </div>
