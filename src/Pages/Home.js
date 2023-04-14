@@ -144,8 +144,7 @@ const Home = () => {
     <li><p className="card-text">Year : {car.year}</p></li>
     <li><p className="card-text">Kilometer Driven : {car.Deiven}</p></li>
     </ul>
-    
-
+ 
   </div>
 </div>
               </div>
