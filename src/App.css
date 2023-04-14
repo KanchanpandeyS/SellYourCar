@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+
+*{
+margin: 0;
+padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homebg{
+    height: 100vh;
+    width: 100vw;
+   
+}
+.small-image{
+    position:absolute;
+    top: 2.9rem;
+    height:690px;
+    width:700px;
+    opacity: 0.9;
+    
+}
+.start-btn{
+    position: absolute;
+    top: 20rem;
+    text-align: center;
+    padding:40px 1100px;
+    display: inline-block;
+    text-decoration: none;
+    
+}
+.header{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #c5e170;  
+    color: white;
+    margin-bottom: 20px;
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h2{
+    margin-left: 50px;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    margin-right: -50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AddDetail-btn{
+    margin-left: 1000px;
+    padding: 0.5rem 1rem;
+    background-color: #7b062f;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.7rem;
+    font-weight: bolder;
+    font-size: 1.05rem;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.car-list{
+    background-color: #c497a7 ;
 }
