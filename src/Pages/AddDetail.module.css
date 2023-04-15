@@ -1,10 +1,31 @@
 .section{
-    background: linear-gradient(green, orange);
+     background: linear-gradient(#cbe67c,#73940f);
+     /*
     width: 100vw;
-    height: 100vh;
+    height: 100vh; */
+    position: relative; 
+    width: 100vw;
+    min-height: 100vh;
+    /* background: url(https://global-uploads.webflow.com/5d9d02c4b01a536c7d5d4a35/5e83776fbc21657cbbdb8ef1_customer-bg.svg); */
+    /* background-size: auto; */
+    background-repeat: repeat;
     position: relative;
+    /* background-position: 100px -400px; */
+    /* animation: App-logo-spin infinite 60s linear; */
+
 
 }
+@keyframes App-logo-spin {
+    0% {
+      background-position: -1300px -450px;
+    }
+    50% {
+      background-position: -2500px -450px;
+    }
+    100% {
+      background-position: -1300px -450px;
+    }
+  }
 .form{
     width: 40%;
     display: block;
@@ -13,14 +34,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.box{
+    display: flex;
+    gap: 24px;
+
+}
 .form label{
-    display: block;
+    display: inline-block;
     width: 100%;
     font-size: 20px;
     font-weight: 500;
-    margin-top: 14px;
+    margin-top: 8px;
     
-
 }
 .form input{
     display: block;
@@ -41,10 +67,30 @@
     border: none;
 }
 .form button{
-    color: red;
+    color: #ffffff;
+    background-color: #030357;
     font-size: 20px;
-    padding: 4px 24px;
+    padding: 6px 24px;
     margin-top: 20px;
     border-radius: 8px;
     border: none;
+}
+.form button:hover{
+    background-color: #24248a;
+}
+.form div{
+    width: 100%;
+}
+
+@media (max-width:700px) {
+    .form{
+        width: 80%;
+    }
+}
+
+@media (max-width:500px) {
+    .form{
+        width: 90%;
+    }
+   
 }

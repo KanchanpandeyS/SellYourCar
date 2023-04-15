@@ -1,22 +1,8 @@
-
 *{
 margin: 0;
 padding: 0;
 }
 
-.homebg{
-    height: 100vh;
-    width: 100vw;
-   
-}
-.small-image{
-    position:absolute;
-    top: 2.9rem;
-    height:690px;
-    width:700px;
-    opacity: 0.9;
-    
-}
 .start-btn{
     position: absolute;
     top: 20rem;
@@ -31,14 +17,15 @@ padding: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #c5e170;  
-    color: white;
+    background-color: #dcc0dc;  
     margin-bottom: 20px;
-    
+    justify-content: space-between;
 }
-
+.logo-container{
+    display: flex;
+}
 .header h2{
-    margin-left: 50px;
+    margin-left: 60px;
 }
 .logo{
     height: 50px;
@@ -46,11 +33,16 @@ padding: 0;
     margin-left: 20px;
     margin-right: -50px;
 }
-
+.button-container{
+    display: flex;
+   
+    /* width: 300px; */
+    
+}
 .AddDetail-btn{
-    margin-left: 1000px;
+    
     padding: 0.5rem 1rem;
-    background-color: #7b062f;
+    background-color: #040451;
     border: none;
     cursor: pointer;
     color: white;
@@ -62,5 +54,24 @@ padding: 0;
 }
 
 .car-list{
-    background-color: #c497a7 ;
+    background-color: #ebe0e4 ;
+}
+.filter{
+    margin-left: 30px;
+}
+.filter select{
+    background: #040451;
+    color: #ffffff;
+    width: 130px;
+    height: 40px;
+    padding: 5px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    border-radius: 8px;
+    border: none;
+}
+.filter option{
+    background: #040451;
+    color: #ffffff;
+    
 }

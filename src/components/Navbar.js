@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {AiOutlineCar} from 'react-icons/ai'
-import {FaPowerOff} from 'react-icons/fa'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { firebaseAuth } from '../utils/firebase-config'
 
@@ -14,15 +13,15 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <div className='header'>
-        
+        <div className='logo-container'>
         <AiOutlineCar className='logo'/>
         <h2>SellMyCar</h2>
-        
-        <div >
-            <button className='AddDetail-btn' onClick={() =>navigate("/addDetail")}>Add Car Details +</button>
-            <button  onClick={() => {alert("logged Off");
+        </div >
+        <div className='button-container'>
+            <button className='AddDetail-btn' onClick={() =>navigate("/addDetail")}>Add Car Details</button>
+            <button className='AddDetail-btn' onClick={() => {alert("logged Off");
             signOut(firebaseAuth)}}>
-            <FaPowerOff style={{color:"#7b062f", height:'25px', width:'30px'}}/>
+            LogOut
             </button>
         </div>
     </div>
