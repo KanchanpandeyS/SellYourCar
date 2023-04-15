@@ -81,3 +81,27 @@ padding: 0;
     color: #ffffff;
     
 }
+.loading-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-custom{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .logo-container{
+      flex-direction: column;
+        
+    }
+    .header h2{
+        margin-left: 0px;
+    }
+    .AddDetail-btn{
+    font-size: 12px;
+    padding: .5rem 0.5rem;
+    margin-right: 5px;
+    }
+  }

@@ -100,7 +100,9 @@ const AddDetails = () => {
         <input type='text ' ref ={discriptionref} placeholder='Enter Discription' required/>
         <label>Sellers Comment: </label>
         <textarea type='text' ref ={sellerCommentref} placeholder='Enter Price' required/>
+        <div className='button-container'>
         <button type='submit'>Add Details</button>
+        </div>
       </form>
      
     </section >

@@ -18,10 +18,17 @@ export default function Header(props) {
 }
 const StyledHeader = styled.header`
   padding: 0 4rem;
+  @media (max-width: 600px) {
+    padding: 0 2.5rem;
+  }
   .logo {
     img {
       height: 5rem;
+      @media (max-width: 600px) {
+        height: 3rem;
+      }
     }
+   
   }
   button {
     padding: 0.5rem 1rem;

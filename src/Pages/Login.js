@@ -74,7 +74,11 @@ const Container = styled.div`
         width: 25vw;
         gap: 2rem;
         color: white;
+        @media (max-width: 600px) {
+          width: 90vw;
+        }
         .container {
+          
           gap: 2rem;
           input {
             padding: 0.5rem 1rem;

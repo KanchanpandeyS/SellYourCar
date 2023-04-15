@@ -113,9 +113,12 @@ import {
       left: 0;
       background-color: rgba(0, 0,0, 0.5);
       height: 100vh;
-      width: 100vw;
+      width: 100%;
       display: grid;
       grid-template-rows: 15vh 85vh;
+      // @media (max-width: 600px) {
+      //   grid-template-rows: 1fr;
+      // }
       .body {
         gap: 5rem;
         color: white;
@@ -133,6 +136,9 @@ import {
           grid-template-columns: ${({ showPassword }) =>
             showPassword ? "1fr 1fr" : "2fr 1fr"};
           width: 60%;
+          @media (max-width: 600px) {
+            display: block;
+          }
           input {
             color: black;
             border: none;

@@ -142,7 +142,8 @@ const Home = () => {
   }, []);
 
   // console.log(filter);
-  if (isloading) return <Loading />;
+  
+ 
   if (filter === "priceh") {
     fetchdata = fetchdata.sort((a, b) => b.mydata.price - a.mydata.price);
   }
@@ -156,7 +157,7 @@ const Home = () => {
   return (
     <div className="car-list">
       <Navbar />
-
+      {isloading?<div className="loading-container"><Loading /></div>:""}
       <div>
         <div className="filter">
           <select name="filter" onChange={(e) => setFilter(e.target.value)}>
@@ -167,7 +168,7 @@ const Home = () => {
           </select>
         </div>
         <div className="px-4 py-2">
-          <div className="row">
+          <div className="row my-custom">
             {fetchdata.map((obj,idx) => {
               return (
                 <div className={`col-sm-6 col-md-3 mb-3 `}key={idx}>
