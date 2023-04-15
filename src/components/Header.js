@@ -25,10 +25,10 @@ const StyledHeader = styled.header`
   }
   button {
     padding: 0.5rem 1rem;
-    background-color: #d2ff4d;
+    background-color: #040451;
     border: none;
     cursor: pointer;
-    color: black;
+    color: #ffffff;
     border-radius: 0.2rem;
     font-weight: bolder;
     font-size: 1.05rem;

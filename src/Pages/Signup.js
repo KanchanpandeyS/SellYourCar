@@ -145,20 +145,20 @@ import {
           }
           button {
             padding: 0.5rem 1rem;
-            background-color: #d2ff4d;
+            background-color: #040451;
             border: none;
             cursor: pointer;
-            color: black;
+            color: #ffffff;
             font-weight: bolder;
             font-size: 1.05rem;
           }
         }
         button {
           padding: 0.5rem 1rem;
-          background-color:#d2ff4d;
+          background-color:#040451;
           border: none;
           cursor: pointer;
-          color:black;
+          color:white;
           border-radius: 0.2rem;
           font-weight: bolder;
           font-size: 1.05rem;
