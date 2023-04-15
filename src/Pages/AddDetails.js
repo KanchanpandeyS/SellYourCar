@@ -46,6 +46,8 @@ const AddDetails = () => {
     Milageref.current.value = "";
     priceref.current.value = "";
     manufactryear.current.value ="";
+    discriptionref.current.value = "";
+    sellerCommentref.current.value ="";
 
   })
   useEffect (() =>{

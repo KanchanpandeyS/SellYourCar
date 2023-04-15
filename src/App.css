@@ -17,21 +17,27 @@ padding: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #dcc0dc;  
+    background-color: #a0ab85;  
     margin-bottom: 20px;
+    color: #ffffff;
     justify-content: space-between;
+   
 }
 .logo-container{
     display: flex;
 }
 .header h2{
     margin-left: 60px;
+    color: #0c0c46;
+    letter-spacing: 1px;
+    font-weight: 10px;
 }
 .logo{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin-left: 20px;
     margin-right: -50px;
+    color: #0c0c46;
 }
 .button-container{
     display: flex;
@@ -54,7 +60,7 @@ padding: 0;
 }
 
 .car-list{
-    background-color: #ebe0e4 ;
+    background-color: #dae7b3;
 }
 .filter{
     margin-left: 30px;

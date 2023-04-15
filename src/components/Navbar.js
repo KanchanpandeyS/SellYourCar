@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import {AiOutlineCar} from 'react-icons/ai'
+import {FaCar} from 'react-icons/fa'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { firebaseAuth } from '../utils/firebase-config'
 
@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className='header'>
         <div className='logo-container'>
-        <AiOutlineCar className='logo'/>
+        <FaCar className='logo'/>
         <h2>SellMyCar</h2>
         </div >
         <div className='button-container'>
