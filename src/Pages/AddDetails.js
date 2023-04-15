@@ -49,7 +49,7 @@ const AddDetails = () => {
 
   })
   useEffect (() =>{
-      const sendData = fetch("https://sellmycar-e7dd1-default-rtdb.asia-southeast1.firebasedatabase.app/mycars.json",{
+      fetch("https://sellmycar-e7dd1-default-rtdb.asia-southeast1.firebasedatabase.app/mycars.json",{
         method: "post",
         body:JSON.stringify(data),
         headers: { "Content-Type": "application/json" }
